@@ -1,0 +1,23 @@
+#clock {
+  font-size: 1rem;
+  background-color: #222;
+  padding: 1em 5em;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center; 
+  flex-direction: column;
+  max-width: 95%;
+  width: auto;
+  position: relative;
+}
+
+#clock::after{
+  content: 'By Nicolas Garay';
+  position: relative;
+  bottom: -3em;
+  width: 100%;
+ color:white;
+ font-weight: bold;
+  text-align: center;
+}

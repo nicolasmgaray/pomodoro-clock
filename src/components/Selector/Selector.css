@@ -1,0 +1,26 @@
+.selector {
+  display: flex;
+  align-items: center;
+  margin: 0.5em;
+  color: var(--color-main);
+  font-weight: bold;
+  
+
+}
+
+.selector-buttons {
+  display: flex;
+  flex-direction: column;
+  padding:0.2em;
+
+}
+
+.selector-increment,.selector-decrement{
+    margin: 0.1em;
+    background-color: var(--color-main);
+    border: none;
+    padding:0.2em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    cursor: pointer;
+}

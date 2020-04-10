@@ -1,0 +1,21 @@
+#counter {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-main);
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer-label {
+  font-family: "Cambay";
+
+}
+
+#time-left {
+  background-color: #eee;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-radius: 15px;
+  font-family: "Share Tech Mono";
+}

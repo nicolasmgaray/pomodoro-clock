@@ -1,0 +1,26 @@
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-size: 1rem;
+  user-select: none;
+  margin-top: 1em;
+}
+
+.control {
+  width: 2.5em;
+  border-radius: 0.7em;
+  height: 2.5em;
+  margin: 0em 1em;
+  background-color: var(--color-main);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control > i {
+  font-size: 1.5em;
+}
