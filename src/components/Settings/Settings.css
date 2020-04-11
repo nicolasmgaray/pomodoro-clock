@@ -1,17 +1,22 @@
 #settings {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   color: white;
   user-select: none;
   flex-wrap: wrap;
   font-size: 1.5rem;
   width: 100%;
+
 }
 
 .group {
   display: flex;
+  flex-direction: column;
+  width: 5em;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  flex: 1 0 8em;
+
 }
+
