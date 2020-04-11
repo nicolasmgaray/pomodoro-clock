@@ -1,4 +1,5 @@
 import React from "react";
+import {actions} from "../../utils/reducer"
 import "./Controls.css";
 
 const Controls = ({ running, dispatch, audioRef }) => {
@@ -8,7 +9,7 @@ const Controls = ({ running, dispatch, audioRef }) => {
         id="start_stop"
         className="control"
         onClick={() => {
-          dispatch({ type: "toggle" });
+          dispatch({ type: actions.TOGGLE });
         }}
       >
         {!running ? (
@@ -23,7 +24,7 @@ const Controls = ({ running, dispatch, audioRef }) => {
         onClick={() => {
           audioRef.current.pause();
           audioRef.current.currentTime = 0;
-          dispatch({ type: "reset" });
+          dispatch({ type: actions.RESET });
         }}
       >
         <i className="fas fa-sync"></i>

@@ -5,11 +5,13 @@
   color: white;
   user-select: none;
   flex-wrap: wrap;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .group {
   display: flex;
   align-items: center;
-  flex: 1 1 5em;
-
+  justify-content: space-evenly;
+  flex: 1 0 8em;
 }

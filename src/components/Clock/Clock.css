@@ -5,19 +5,20 @@
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  align-self: center; 
+  align-self: center;
   flex-direction: column;
   max-width: 95%;
+
   width: auto;
   position: relative;
 }
 
-#clock::after{
-  content: 'By Nicolas Garay';
+#clock::after {
+  content: "By Nicolas Garay";
   position: relative;
-  bottom: -3em;
+  bottom: 0em;
   width: 100%;
- color:white;
- font-weight: bold;
+  color: white;
+  font-weight: bold;
   text-align: center;
 }

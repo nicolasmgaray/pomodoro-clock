@@ -5,26 +5,25 @@ import "./Settings.css";
 const Settings = ({ breakLength, sessionLength, dispatch }) => {
   return (
     <div id="settings">
-      <p>Take</p>
-      <div className="group">       
+      <div className="group">
         <Selector
           dispatch={dispatch}
           value={breakLength / 60}
           idPrefix="break"
         />
         <p>
-          minutes <span id="break-label"> break </span>for every
-        </p>{" "}
+          minutes <span id="break-label"> breaks </span>
+        </p>
       </div>
-      <div className="group">      
+      <div className="group">
         <Selector
           dispatch={dispatch}
           value={sessionLength / 60}
           idPrefix="session"
         />
         <p>
-          minutes <span id="session-label"> sesions</span>.{" "}
-        </p>{" "}
+          minutes <span id="session-label"> sesions</span>
+        </p>
       </div>
     </div>
   );

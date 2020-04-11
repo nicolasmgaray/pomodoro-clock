@@ -1,8 +1,9 @@
 import React from "react";
+import { actions } from "../../utils/reducer";
 import "./Selector.css";
 
 const Selector = ({ value, idPrefix, dispatch }) => {
-  let type = "set_" + idPrefix;
+  const type =    idPrefix === "break" ? actions.SET_BREAK_TIME : actions.SET_SESSION_TIME;
   return (
     <div className="selector">
       <div className="selector-value" id={idPrefix + "-length"}>

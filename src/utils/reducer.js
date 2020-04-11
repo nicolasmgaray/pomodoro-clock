@@ -1,20 +1,28 @@
+const actions = {
+  TICK: "TICK",
+  SWITCH_STAGE: "SWITCH_STAGE",
+  TOGGLE: "TOGGLE",
+  SET_SESSION_TIME: "SET_SESSION_TIME",
+  SET_BREAK_TIME: "SET_BREAK_TIME",
+  RESET: "RESET",
+};
+
 const reducer = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
-    case "tick":
+    case actions.TICK:
       if (state.running && state.timer > 0)
         return { ...state, timer: state.timer - 1 };
       else return { ...state };
 
-    case "switch_stage":
+    case actions.SWITCH_STAGE:
       if (state.stage === "Session")
         return { ...state, stage: "Break", timer: state.breakLength };
       else return { ...state, stage: "Session", timer: state.sessionLength };
 
-    case "toggle":
+    case actions.TOGGLE:
       return { ...state, running: !state.running };
 
-    case "set_session":
+    case actions.SET_SESSION_TIME:
       if (state.running || action.payload <= 0 || action.payload > 3600)
         return { ...state };
       else {
@@ -24,7 +32,7 @@ const reducer = (state = initialState, action) => {
         return { ...state, sessionLength: newSessionLength, timer: newTimer };
       }
 
-    case "set_break":
+    case actions.SET_BREAK_TIME:
       if (state.running || action.payload <= 0 || action.payload > 3600)
         return { ...state };
       else {
@@ -34,7 +42,7 @@ const reducer = (state = initialState, action) => {
         return { ...state, breakLength: newBreakLength, timer: newTimer };
       }
 
-    case "reset":
+    case actions.RESET:
       return {
         ...initialState,
       };
@@ -52,4 +60,4 @@ const initialState = {
   running: false,
 };
 
-export { reducer, initialState };
+export { reducer, initialState, actions };
